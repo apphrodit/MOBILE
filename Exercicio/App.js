@@ -1,5 +1,5 @@
 import { useState } from 'react'; 
-import { StyleSheet, Text, View, TextInput,Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput,Button,} from 'react-native';
 import ButtonCadastrar from './src/components/button'
 export default function App() {
   
@@ -24,8 +24,9 @@ export default function App() {
       <TextInput style={styles.input} placeholder='Informe o Comprimento' placeholderTextColor={'#7777'} value ={vali} onChangeText={(val)=> setVali(Number(val))}/> 
       <TextInput style={styles.input} placeholder='Informe a corrente' placeholderTextColor={'#7777'} value={valii} onChangeText={(val)=> setValii(Number(val))}/>
       <Button title='Calcular'onPress={()=>Calc()} style={styles.button}/>
-      <Text>Bitola De 220v:{resi}</Text>
-      <Text>Bitola De 127v:{resii}</Text>
+      <Text style={styles.texto}>Bitola De 220v:{resi}</Text>
+      <Text style={styles.texto}>Bitola De 127v:{resii}</Text>
+      
     </View>
   );
 }
@@ -53,4 +54,9 @@ const styles = StyleSheet.create({
     padding: '5px',
     borderRadius: '5px',
   },
+  texto : {
+    color: '#000',
+    fontSize: '1.8rem',
+    fontWeight : 'bold'
+  }
 });
