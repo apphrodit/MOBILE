@@ -10,9 +10,20 @@ import{
 import React from 'react';
 import MaskInput from "react-native-mask-input";
 
-export default function FormJuros(){
+const { width, height } = Dimensions.get('screen')
+
+const user = {
+    username: "user",
+    pass: "123456"
+}
+export default function FormJuros({navigation}){
     
-    const [] = React.useState('');
-    const [] = React.useState('');
-    const [] = React.useState('');
+    const [username, setUsername] = React.useState('');
+    const [pass, setPass] = React.useState('');
+
+    const validaUsuario = () => {
+        if(pass == user.pass && username == user.username){
+            navigation.navigate("telaJuros",{ name: 'telaJuros' })
+        }
+    }
 }
