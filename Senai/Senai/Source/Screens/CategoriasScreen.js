@@ -1,16 +1,16 @@
 import React from 'react';
-import categorias from '../Mocks/Categorias';
+import categorias from '../Mocks/categorias';
 import ItemLista from '../components/ItemLista'
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
 
 export default function CategoriasScreen({ navigation }) {
     
     const abrirCursos = (dados) => {
-        navigation.navigate('Detalhes', { dados })
+        navigation.navigate('Cursos', { dados });
     }
 
     return(
-        <View>
+        <View style={styles.container}>
             <FlatList
                 data={categorias}
                 style={styles.list}
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     },
     list: {
         width: '100%',
-        paddingHorizontal: 20
     },
     item: {
         flex: 1,

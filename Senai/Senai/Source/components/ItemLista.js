@@ -5,9 +5,7 @@ export default function ItemLista({ item  }) {
         <View style={styles.item}>
             <Image style={styles.img}/>
             <View>
-                <Text style={styles.text}>CAI{item.tipo}</Text>
-                <Text style={styles.text}>FIC{item.tipo}</Text>
-                <Text style={styles.text}>Cursos Técnicos{item.tipo}</Text>
+                <Text style={styles.text}>{item.tipo}</Text>
             </View>
         </View>
     )
@@ -26,7 +24,6 @@ const styles = StyleSheet.create({
     item: {
         flex: 1,
         flexDirection: 'row',
-        margin: 10,
         borderBottomColor: '#999',
         borderBottomWidth: 1,
     },

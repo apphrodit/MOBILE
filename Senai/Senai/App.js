@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import  Categorias from './Source/Screens/Categorias'
+import Cursos from './Source/Screens/CursosScreen'
+import Categorias from './Source/Screens/CategoriasScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +12,11 @@ export default function App() {
         <Stack.Screen
           name="Categorias"
           component={Categorias}
-          options={{ title : 'Senai'}}/>
+          options={{ title: 'Senai' }} />
+        <Stack.Screen
+          name="Cursos"
+          component={Cursos}
+          options={{ title: 'Cursos' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
